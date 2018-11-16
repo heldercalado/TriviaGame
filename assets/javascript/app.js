@@ -49,16 +49,22 @@ var myArr = {
 
 function count() {
 
-    // DONE: increment time by 1, remember we cant use "this" here.
+  
     time--;
-    if (time < 1) {
+    if (time <= 0) {
 
 
         $("#display").text("Time is Up!");
         $("#btn").prop('value', "Start Timer");
         //.prop('value', "Start Timer"); 
-
+        
         stop();
+        reset();
+        $("#mymodal").modal({
+            fadeDuration: 1000,
+            fadeDelay: 1.75 // Will fade in 750ms after the overlay finishes.
+          });
+       
 
 
     }
@@ -102,7 +108,31 @@ function reset() {
 
     $("#display").text("00:00");
     time = 100;
+    countScore();
+resetChoices();
+}
+function resetChoices(){
 
+    $('input[name="exampleRadios"]').prop('checked', false);
+}
+
+function countScore(){
+    var myScore = 0; 
+    if($('#q1o1').is(':checked')) { myScore++; };
+    if($('#q2o1').is(':checked')) { myScore++; };
+    if($('#q3o2').is(':checked')) { myScore++; };
+    if($('#q4o1').is(':checked')) { myScore++; };
+    if($('#q5o1').is(':checked')) { myScore++; };
+    if($('#q6o1').is(':checked')) { myScore++; };
+    if($('#q7o1').is(':checked')) { myScore++; };
+    if($('#q8o1').is(':checked')) { myScore++; };
+    if($('#q9o1').is(':checked')) { myScore++; };
+    if($('#q10o1').is(':checked')) { myScore++; };
+
+    $('#rightanswer').text(myScore);
+    $('#wronganswer').text(10 - myScore);
+
+    
 }
 
 function loadQuestions(argArray) {
@@ -144,6 +174,7 @@ function timeConverter(t) {
 
 $(document).ready(function () {
     // $('label[for=q1o1]').html(myArr.q1.answers[0]);
+    
     loadQuestions(myArr);
     $("#btn").on("click", function () {
 
@@ -158,6 +189,6 @@ $(document).ready(function () {
 
     });
 
-
+    
 
 });
