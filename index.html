@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="./assets/javascript/app.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Trivia Game</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Trivia Game - Movies Edition</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="timerheader"><span id="display"></span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <input type='button' value='Start Timer' id='btn'>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q1">Question1:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <form action="">
+                    <div class="form-inline justify-content-center">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q1o1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q1o1">
+                            Default radio 1
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q1o2" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q1o2">
+                            Default radio 2
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q1o3" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q1o3">
+                            Default radio 3
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q1o4" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q1o4">
+                            Default radio 4
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q2">Question2:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                    <div class="form-inline justify-content-center">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q2o1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q2o1">
+                            Default radio 1
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q2o2" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q2o2">
+                            Default radio 2
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q2o3" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q2o3">
+                            Default radio 3
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q2o4" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q2o4">
+                            Default radio 4
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q3">Question3:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                    <div class="form-inline justify-content-center">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q3o1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q3o1">
+                            Default radio 1
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q3o2" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q3o2">
+                            Default radio 2
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q3o3" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q3o3">
+                            Default radio 3
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q3o4" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q3o4">
+                            Default radio 4
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q4">Question4:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                    <div class="form-inline justify-content-center">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q4o1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q4o1">
+                            Default radio 1
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q4o2" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q4o2">
+                            Default radio 2
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q4o3" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q4o3">
+                            Default radio 3
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q4o4" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q4o4">
+                            Default radio 4
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q5">Question5:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                    <div class="form-inline justify-content-center">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q5o1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q5o1">
+                            Default radio 1
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q5o2" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q5o2">
+                            Default radio 2
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q5o3" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q5o3">
+                            Default radio 3
+                        </label>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="q5o4" value="option1"
+                            checked>
+                        <label class="form-check-label" for="q5o4">
+                            Default radio 4
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q6">Question6:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                <div class="form-inline justify-content-center">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q6o1" value="option1" checked>
+                    <label class="form-check-label" for="q6o1">
+                        Default radio 1
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q6o2" value="option1" checked>
+                    <label class="form-check-label" for="q6o2">
+                        Default radio 2
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q6o3" value="option1" checked>
+                    <label class="form-check-label" for="q6o3">
+                        Default radio 3
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q6o4" value="option1" checked>
+                    <label class="form-check-label" for="q6o4">
+                        Default radio 4
+                    </label>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q7">Question7:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                <div class="form-inline justify-content-center">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q7o1" value="option1" checked>
+                    <label class="form-check-label" for="q7o1">
+                        Default radio 1
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q7o2" value="option1" checked>
+                    <label class="form-check-label" for="q7o2">
+                        Default radio 2
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q7o3" value="option1" checked>
+                    <label class="form-check-label" for="q7o3">
+                        Default radio 3
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q7o4" value="option1" checked>
+                    <label class="form-check-label" for="q7o4">
+                        Default radio 4
+                    </label>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q8">Question8:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                <div class="form-inline justify-content-center">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q8o1" value="option1" checked>
+                    <label class="form-check-label" for="q8o1">
+                        Default radio 1
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q8o2" value="option1" checked>
+                    <label class="form-check-label" for="q8o2">
+                        Default radio 2
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q8o3" value="option1" checked>
+                    <label class="form-check-label" for="q8o3">
+                        Default radio 3
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q8o4" value="option1" checked>
+                    <label class="form-check-label" for="q8o4">
+                        Default radio 4
+                    </label>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q9">Question9:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                <div class="form-inline justify-content-center">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q9o1" value="option1" checked>
+                    <label class="form-check-label" for="q9o1">
+                        Default radio 1
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q9o2" value="option1" checked>
+                    <label class="form-check-label" for="q9o2">
+                        Default radio 2
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q9o3" value="option1" checked>
+                    <label class="form-check-label" for="q9o3">
+                        Default radio 3
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q9o4" value="option1" checked>
+                    <label class="form-check-label" for="q9o4">
+                        Default radio 4
+                    </label>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="q10">Question10:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <form action="">
+                <div class="form-inline justify-content-center">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q10o1" value="option1"
+                        checked>
+                    <label class="form-check-label" for="q10o1">
+                        Default radio 1
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q10o2" value="option1"
+                        checked>
+                    <label class="form-check-label" for="q10o2">
+                        Default radio 2
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q10o3" value="option1"
+                        checked>
+                    <label class="form-check-label" for="q10o3">
+                        Default radio 3
+                    </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="q10o4" value="option1"
+                        checked>
+                    <label class="form-check-label" for="q10o4">
+                        Default radio 4
+                    </label>
+                </div>
+            </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
